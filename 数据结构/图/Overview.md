@@ -750,7 +750,7 @@ public int find(int x) {
 
 ![](./assets/img-wuwe-et.png)
 
-比起第一种路径压缩，显然这种方法压缩得更彻底，直接把一整条树枝压平，一点意外都没有。就算一些极端情况下产生了一棵比较高的树，只要一次路径压缩就能大幅降低树高，从 [摊还分析](https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzAxODQxMDM0Mw%3D%3D%26mid%3D2247496738%26idx%3D1%26sn%3D2c7d16c8b0ee64d8101abb35e06b08cc%26scene%3D21%23wechat_redirect&source=article&objectId=2190285) 的角度来看，所有操作的平均时间复杂度依然是 O(1)，所以从效率的角度来说，推荐你使用这种路径压缩算法。
+比起第一种路径压缩，显然这种方法压缩得更彻底，直接把一整条树枝压平，一点意外都没有。就算一些极端情况下产生了一棵比较高的树，只要一次路径压缩就能大幅降低树高，从 [摊还分析](https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247496738&idx=1&sn=2c7d16c8b0ee64d8101abb35e06b08cc&scene=21#wechat_redirect) 的角度来看，所有操作的平均时间复杂度依然是 O(1)，所以从效率的角度来说，推荐你使用这种路径压缩算法。
 
 **另外，如果使用路径压缩技巧，那么`size`数组的平衡优化就不是特别必要了**。所以你一般看到的 Union Find 算法应该是如下实现：
 
